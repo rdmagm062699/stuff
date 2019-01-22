@@ -6,5 +6,19 @@ export GREP_OPTIONS='--color=auto'
 
 # Tell ls to be colourful
 export CLICOLOR=1
-#export LSCOLORS=Exfxcxdxbxegedabagaca
 export LSCOLORS=ExFxCxDxBxegedabagacad
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PGDATA=/usr/local/var/postgresql@9.6
+
+# Setting PATH for Python 3.5
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+
+. .bashrc
