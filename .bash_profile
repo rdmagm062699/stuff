@@ -20,5 +20,17 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# Aliases
+alias flushdns='sudo killall -HUP mDNSResponder'
+alias azdev='az login > /dev/null && az account set --subscription HISC-DEV && az account show'
+
+# Git completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 . .bashrc
