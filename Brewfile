@@ -1,0 +1,13 @@
+tap "argoproj/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "azure-cli"
+brew "bash"
+brew "circleci"
+brew "git"
+brew "jq"
+brew "kubernetes-cli", link: false
+brew "minikube"
+brew "pyenv"
+brew "argoproj/tap/kubectl-argo-rollouts"
