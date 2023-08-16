@@ -23,6 +23,8 @@ fi
 # Aliases
 alias flushdns='sudo killall -HUP mDNSResponder'
 alias azdev='az login > /dev/null && az account set --subscription HISC-DEV && az account show'
+alias gitprune='git fetch --prune && git branch --merged | grep -E -v "^((\* )|\s*(develop|main|master)$)" | xargs git branch -d'
+alias gitgone="git branch -vv | grep origin | grep gone | awk '{ print $1 }' | grep -E -v '^((\* )|\s*(develop|main|master)$)' | xargs git branch -D"
 
 # Git completion
 if [ -f ~/.git-completion.bash ]; then
